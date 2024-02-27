@@ -6,10 +6,10 @@ import Footer from './Dashboard/Pages/Footer';
 
 export default function App() {
   return (
-    <View style={headerStyle.container}>
-      <Header/>
-      <Body/>
-      <Footer/>
+    <View style= {headerStyle.container } >
+      <Header style={headerStyle.header }/>
+      <Body style={headerStyle.body }/>
+      <Footer style={headerStyle.footer }/>
     </View>
   );
 }
@@ -20,6 +20,7 @@ const headerStyle = StyleSheet.create({
     flex: 1,
     backgroundColor: '#D9D6D8',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'collapse',
   },
+ 
 });

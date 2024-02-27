@@ -12,7 +12,7 @@ const Header = () => {
 const style = StyleSheet.create({
     container: {
         backgroundColor: '#f0f0f0',
-        height: '10%',
+        height: '20%',
         width: '100%'
       },
 })
