@@ -1,19 +1,26 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import NavBar from '../Component/navBar';
+import MenuCreate from '../Component/MenuCreate';
 
-const Header = () => {
+const Header = ({OpenNav, openMenu}) => {
   return (
     <View style={style.container}>
-      <Text>Ceci est l'en tête</Text>
+        <NavBar OpenNav={OpenNav}/>
+        <MenuCreate onPress={openMenu}/>
     </View>
   );
 };
 
 const style = StyleSheet.create({
     container: {
-        backgroundColor: '#f0f0f0',
+        flexDirection:"row",
+        justifyContent:"space-between",
+        backgroundColor: '#A1B5FE',
         height: '10%',
-        width: '100%'
+        width: '100%',
+        paddingLeft: 20,
+        paddingRight: 20
       },
 })
 
