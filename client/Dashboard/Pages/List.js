@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     ListCard: {
-        height: "65%",
+        height: "60%",
     },
     ListFooter: {
         height: "10%",

@@ -22,7 +22,7 @@ const style = StyleSheet.create({
     textStyle: {
         flexDirection: "row",
         backgroundColor: "#A1B5FE",
-        width:70,
+        width:80,
     },
     boutonPencilStyle:{
         paddingTop: 11,

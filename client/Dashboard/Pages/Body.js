@@ -27,7 +27,6 @@ const style = StyleSheet.create({
   },
   listContainer: {
     flexDirection: 'row',
-    width: '100%',
     marginBottom: 10,
     flexWrap: 'wrap',
   },
