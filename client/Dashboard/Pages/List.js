@@ -10,7 +10,6 @@ const List = () => {
         <View style= {styles.ListHeader}>
             <Text style = {componentStyle.text}>{titleList}</Text>
             <TouchableOpacity
-                onpressed = {console.log("affichage menu action pour une list")}
             >
                 <Text style = {componentStyle.text}>...</Text>
             </TouchableOpacity>           
@@ -21,7 +20,6 @@ const List = () => {
         <View style= {styles.ListFooter}>
             <TextInput
                 style = {componentStyle.text}
-                onChangeText={console.log("Card ajouté")}
                 placeholder="+ Add a card"
                 placeholderTextColor= "#A1B5FE"
             />
