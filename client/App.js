@@ -7,19 +7,27 @@ import { useState } from 'react';
 
 export default function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [listProject, setListProject] = useState([]);
+  const [isDeleteOpen, setDeleteOpen] = useState(false);
 
   const OpenNav = () => {
     setIsNavOpen(!isNavOpen);
-  };
-  const MenuOpen = () => {
-    setMenuOpen(!isMenuOpen)
   }
+  const createProject = () => {
+    setListProject([...listProject, {}]);
+  }
+  const deleteProject = (index) => {
+    setListProject(listProject.filter((project, i) => i !== index));
+  }
+  const deleteOpen = () => {
+    setDeleteOpen(!isDeleteOpen);
+  }
+  console.log(isDeleteOpen)
   return (
     <View style={headerStyle.container}>
-      <Header OpenNav ={OpenNav} openMenu={MenuOpen}/>
-      <Body isNavOpen={isNavOpen} isMenuOpen={isMenuOpen}/>
-      <Footer/>
+      <Header OpenNav ={OpenNav}/>
+      <Body isNavOpen={isNavOpen} createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen} />
+      {/* <Footer/> */}
     </View>
   );
 }
