@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import Card from "./Card";
 
 
 let titleList = "List"
@@ -14,7 +15,9 @@ const List = () => {
                 <Text style = {componentStyle.text}>...</Text>
             </TouchableOpacity>           
         </View>
-        <View style = {styles.ListCard}></View>
+        <View style = {styles.ListCard}>
+            <Card/>
+        </View>
         <View style= {styles.ListFooter}>
             <TextInput
                 style = {componentStyle.text}
