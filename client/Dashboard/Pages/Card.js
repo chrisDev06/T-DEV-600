@@ -28,17 +28,21 @@ else{
     titleReduce= titleCard
 }
 
+let arrayCards = []
+let displayCard
+
 const Card = () => {
-    const [title, setTitle] = useState(titleReduce)
+
+  const [title, setTitle] = useState(titleReduce)
 
   return (
     <View style= {styles.CardPage}>
+
         <View style= {styles.CardBody}>
             <TouchableOpacity onPress={()=> {  
                 if(pressed == false){
                     setTitle(titleCard)
                     pressed = true
-
                 }
                 else if(pressed == true){
                     setTitle(titleReduce)
@@ -58,20 +62,16 @@ const Card = () => {
   )}
 
 const styles = StyleSheet.create({
-    CardPage : {
+    CardBody: {
         backgroundColor: "#ffffff",
         width: 265,
-        justifyContent: "center",
-        borderRadius: 20,
-        margin: 5
-    },
-    CardBody: {
         maxWidth: 260,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
         padding: 10,
         margin: 7,
+        borderRadius: 20,
     },
 })
 
