@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-nativ
 let titleCard = "Card"
 const Card = () => {
   return (
-    <View sttyle= {styles.CardPage}>
+    <View style= {styles.CardPage}>
         <View style= {styles.CardBody}>
             <Text style = {componentStyle.text}>{titleCard}</Text>
             <TouchableOpacity
@@ -30,16 +30,14 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 30,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        padding: 10,
     },
         
 })
 
 const componentStyle = StyleSheet.create({
     text : {
-        color: "#A1B5FE"
+        color: "black"
     }
 })
 
