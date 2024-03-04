@@ -34,7 +34,8 @@ const style = StyleSheet.create({
     container: {
         backgroundColor: '#A1B5FE',
         minWidth: '40%',
-        height: '100%'
+        height: '100%',
+        
       },
     menuContenair:{
         flexDirection: "row",
@@ -48,6 +49,7 @@ const style = StyleSheet.create({
     },
     projectStyle:{
       marginTop: 20,
+      paddingLeft: 10,
     },
     boutonTrashStyle:{
 

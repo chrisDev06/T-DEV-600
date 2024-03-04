@@ -14,8 +14,8 @@ const List = () => {
             </TouchableOpacity>           
         </View>
         <View style = {styles.ListCard}>
-            <Card/>
-            <Card/>
+            <Card titleCard={"azerzteghryjtukyilukyutjyhrtgdrsfqdzEQFSRGD"}/>
+            <Card titleCard={"azerzteghryjtukyilukyutjyhrtgdrsfqdzEQFSRGD"}/>
         </View>
         <View style= {styles.ListFooter}>
             <TouchableOpacity 
@@ -35,14 +35,12 @@ const List = () => {
 const styles = StyleSheet.create({
     ListPage : {
         backgroundColor: "#414141",
-        width: 275,
-        height: 500,
+        maxWidth: "40%",
+        maxHeight: 300,
         borderRadius: 20,
-        margin: 20
-
+        margin: 20,
     },
     ListHeader: {
-        height: "15%",
         backgroundColor: "#363636",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -52,7 +50,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     ListCard: {
-        height: "75%"
+        height: "65%",
     },
     ListFooter: {
         height: "10%",
