@@ -1,22 +1,24 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import DashNav from '../Component/DashNav';
 import List from "./List"
 
-
-const Body = () => {
+const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen, isDeleteOpen}) => {
   return (
     <View style= {styles.BodyPage}>
+    <View style={style.container}>
+      {isNavOpen && <DashNav createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen}/>}
       <List/>
     </View>
   );
 };
 
-const styles = {
-  BodyPage: {
-    backgroundColor: "#FFFFFF",
-    height: "70%",
-    width: "100%"
-  }
-}
+const style = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    height: '80%',
+    width:"100%",
+  },
+});
 
 export default Body;

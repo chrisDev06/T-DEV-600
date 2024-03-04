@@ -3,13 +3,31 @@ import { StyleSheet, Text, View } from 'react-native';
 import Header from './Dashboard/Pages/Header';
 import Body from './Dashboard/Pages/Body';
 import Footer from './Dashboard/Pages/Footer';
+import { useState } from 'react';
 
 export default function App() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [listProject, setListProject] = useState([]);
+  const [isDeleteOpen, setDeleteOpen] = useState(false);
+
+  const OpenNav = () => {
+    setIsNavOpen(!isNavOpen);
+  }
+  const createProject = () => {
+    setListProject([...listProject, {}]);
+  }
+  const deleteProject = (index) => {
+    setListProject(listProject.filter((project, i) => i !== index));
+  }
+  const deleteOpen = () => {
+    setDeleteOpen(!isDeleteOpen);
+  }
+  console.log(isDeleteOpen)
   return (
-    <View style= {headerStyle.container } >
-      <Header style={headerStyle.header }/>
-      <Body style={headerStyle.body }/>
-      <Footer style={headerStyle.footer }/>
+    <View style={headerStyle.container}>
+      <Header OpenNav ={OpenNav}/>
+      <Body isNavOpen={isNavOpen} createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen} />
+      {/* <Footer/> */}
     </View>
   );
 }
