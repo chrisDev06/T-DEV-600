@@ -9,20 +9,24 @@ const List = () => {
     <View style= {styles.ListPage}>
         <View style= {styles.ListHeader}>
             <Text style = {componentStyle.text}>{titleList}</Text>
-            <TouchableOpacity
-            >
+            <TouchableOpacity>
                 <Text style = {componentStyle.text}>...</Text>
             </TouchableOpacity>           
         </View>
         <View style = {styles.ListCard}>
             <Card/>
+            <Card/>
         </View>
         <View style= {styles.ListFooter}>
-            <TextInput
-                style = {componentStyle.text}
-                placeholder="+ Add a card"
-                placeholderTextColor= "#A1B5FE"
-            />
+            <TouchableOpacity 
+                onPress={ 
+                    ()=>{
+                        return <Card/>
+                    }
+                }
+            >
+            <Text  style = {componentStyle.text} >+ Add a card</Text> 
+            </TouchableOpacity>
         </View>
     </View>
   );
