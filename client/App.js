@@ -38,6 +38,7 @@ const headerStyle = StyleSheet.create({
     flex: 1,
     backgroundColor: '#D9D6D8',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'collapse',
   },
+ 
 });
