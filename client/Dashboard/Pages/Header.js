@@ -1,13 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import NavBar from '../Component/navBar';
-import MenuCreate from '../Component/MenuCreate';
 
-const Header = ({OpenNav, openMenu}) => {
+const Header = ({OpenNav}) => {
   return (
     <View style={style.container}>
         <NavBar OpenNav={OpenNav}/>
-        <MenuCreate onPress={openMenu}/>
     </View>
   );
 };

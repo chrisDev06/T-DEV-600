@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import DashNav from '../Component/DashNav';
-import Menu from '../Component/Menu';
 
-const Body = ({ isNavOpen, isMenuOpen }) => {
+const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen, isDeleteOpen}) => {
   return (
     <View style={style.container}>
-      {isNavOpen && <DashNav/>}
-      <View style={style.MenuStyle}>
-        {isMenuOpen && <Menu/>}
-      </View>
-       
+      {isNavOpen && <DashNav createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen}/>}
     </View>
   );
 };
@@ -21,16 +16,6 @@ const style = StyleSheet.create({
     height: '80%',
     width:"100%",
   },
-  MenuStyle:{
-    position:"absolute",
-    minHeight: '40%',
-    minWidth:"20%",
-    borderRadius: 50,
-    borderTopRightRadius: 0,
-    borderTopLeftRadius: 0,
-    right: 4,
-    overflow: 'hidden',
-  }
 });
 
 export default Body;
