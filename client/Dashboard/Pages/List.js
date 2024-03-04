@@ -14,8 +14,8 @@ const List = () => {
             </TouchableOpacity>           
         </View>
         <View style = {styles.ListCard}>
-            <Card titleCard={"azerzteghryjtukyilukyutjyhrtgdrsfqdzEQFSRGD"}/>
-            <Card titleCard={"azerzteghryjtukyilukyutjyhrtgdrsfqdzEQFSRGD"}/>
+            <Card/>
+            <Card/>
         </View>
         <View style= {styles.ListFooter}>
             <TouchableOpacity 
@@ -29,7 +29,7 @@ const List = () => {
             </TouchableOpacity>
         </View>
     </View>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
