@@ -1,13 +1,15 @@
+import { useState } from 'react';
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 
 
-let titleCard = "AZERTYUIOPQSDFGHJKLMWXCVBNazertyuioiuytresdfghjklm"
-let title
+let titleCard = "AZERTYUIOPQSDFGHJKLMWXCVBNazertyuioiuytresdfghjklmAZERTYUIOPQSDFGHJKLMWXCVBNazertyuioiuytresdfghjklm"
 let pressed = false
 
+let titleReduce;
 let tmp = titleCard.split("")
 let tmp2 = [];
+
 if(tmp.length > 22){
     let i= 0
     while( i< 22){
@@ -20,27 +22,28 @@ if(tmp.length > 22){
         y++
     }
     
-    title = tmp2.join("")
+    titleReduce= tmp2.join("")
 }
 else{
-    title = titleCard
+    titleReduce= titleCard
 }
 
 const Card = () => {
+    const [title, setTitle] = useState(titleReduce)
+
   return (
     <View style= {styles.CardPage}>
         <View style= {styles.CardBody}>
-            <TouchableOpacity onPress={()=> {
-                console.log("tata")
+            <TouchableOpacity onPress={()=> {  
                 if(pressed == false){
-                    title = titleCard
-                    pressed == true
+                    setTitle(titleCard)
+                    pressed = true
+
                 }
                 else if(pressed == true){
-                    title = tmp2.join("")
+                    setTitle(titleReduce)
                     pressed = false
                 }
-                console.log("toto")
              }
             }  
             >
@@ -58,25 +61,24 @@ const styles = StyleSheet.create({
     CardPage : {
         backgroundColor: "#ffffff",
         width: 265,
-        height: 50,
         justifyContent: "center",
         borderRadius: 20,
         margin: 5
     },
     CardBody: {
+        maxWidth: 260,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 7,
+        padding: 10,
         margin: 7,
     },
-        
 })
 
 const componentStyle = StyleSheet.create({
     text : {
         color: "black",
-        maxWidth: 250,
+        maxWidth: 230,
     },
     button : {
         color: "black",
