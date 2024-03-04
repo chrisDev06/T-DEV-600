@@ -10,8 +10,6 @@ export default function App() {
   const [listProject, setListProject] = useState([]);
   const [isDeleteOpen, setDeleteOpen] = useState(false);
   const [listList, setListList]= useState([])
-  const [listCard, setListCard]= useState([])
-
   const OpenNav = () => {
     setIsNavOpen(!isNavOpen);
   }
@@ -23,15 +21,6 @@ export default function App() {
   }
   const deleteOpen = () => {
     setDeleteOpen(!isDeleteOpen);
-  }
-  const createList = () => {
-    setListList([...listList, {}]);
-  }
-  const createCard = () => {
-    setListCard([...listCard, {}]);
-  }
-  const deleteList = (index) => {
-    setListList(listList.filter((project, i) => i !== index));
   }
   const deleteCard = (index) => {
     setListCard(listList.filter((project, i) => i !== index));

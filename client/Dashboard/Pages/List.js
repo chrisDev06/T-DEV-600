@@ -1,31 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 import Card from "./Card";
 
 
 let titleList = "List"
+
 const List = () => {
+
+    const [listCard, setListCard]= useState([])
+
+    const createCard = () => {
+        setListCard([...listCard, {}]);
+      }
+
+    const deleteCard = (index) => {
+        setListCard(listList.filter((project, i) => i !== index));
+      }
+
+    const displayCard = ()=>{
+        return(
+            <View>
+            { listCard.map((card, index)=>(
+                <Card titleCard={"fkdsvhfjfekndgnfhg,fdgbsvbdnfh,g;jcgnbxfljh"} key={index}/>
+            ))}
+            </View>
+        )
+    }
   return (
     <View style= {styles.ListPage}>
         <View style= {styles.ListHeader}>
             <Text style = {componentStyle.text}>{titleList}</Text>
-            <TouchableOpacity>
-                <Text style = {componentStyle.text}>...</Text>
+            <TouchableOpacity onPress={deleteCard}>
+                <Text style = {componentStyle.text}>update</Text>
+            </TouchableOpacity> 
+            <TouchableOpacity >
+                <Text style = {componentStyle.text}>delete</Text>
             </TouchableOpacity>           
         </View>
         <View style = {styles.ListCard}>
-            <Card/>
-            <Card/>
+           {displayCard(listCard)}
         </View>
         <View style= {styles.ListFooter}>
-            <TouchableOpacity 
-                onPress={ 
-                    ()=>{
-                        return <Card/>
-                    }
-                }
-            >
-            <Text  style = {componentStyle.text} >+ Add a card</Text> 
+            <TouchableOpacity onPress={createCard}>
+            <Text style = {componentStyle.text}>+ Add a card</Text> 
             </TouchableOpacity>
         </View>
     </View>
