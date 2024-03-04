@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 
     },
     ListHeader: {
-        height: "20%",
+        height: "15%",
         backgroundColor: "#363636",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     ListCard: {
-        height: "70%"
+        height: "75%"
     },
     ListFooter: {
         height: "10%",

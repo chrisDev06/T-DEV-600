@@ -22,15 +22,16 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         width: 265,
         height: 50,
+        justifyContent: "center",
         borderRadius: 20,
-        margin: 20
+        margin: 5
     },
     CardBody: {
-        backgroundColor: "grey",
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 10,
+        padding: 5,
+        margin: 5,
     },
         
 })
