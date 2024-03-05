@@ -16,34 +16,38 @@ const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen,
     return(
         <View>
         { listList.map((card, index)=>(
-            <List titleCard={"Liste"+ index} key={index}/>
+            <List titleList={"Liste"+ index} key={index}/>
         ))}
         </View>
     )
   }
   
   return (
-    <View>
-    <ScrollView style= {style.BodyPage}>
+    <View style= {style.BodyPage}>
       <View style={style.container}>
         {isNavOpen && <DashNav createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen}/>}
           <View style={style.listContainer}>
            {selectList(listList)}
           </View>
       </View>
-    </ScrollView>
-    <Pressable onPress={createList}>
-      <Text style= {style.createListButton}>+</Text>
-    </Pressable>
+      <Pressable onPress={createList}>
+        <Text style= {style.createListButton}>+</Text>
+      </Pressable>
     </View>
   );
 };
 
 const style = StyleSheet.create({
- container: {
+  BodyPage: {
+    width: "100%",
+  },
+  container: {
     flexDirection: 'row',
+    justifyContent: "start",
+    alignItems: "start",
   },
   listContainer: {
+    display: "flex",
     flexDirection: 'row',
     width: '100%',
     marginBottom: 10,

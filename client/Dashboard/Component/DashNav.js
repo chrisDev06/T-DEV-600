@@ -35,7 +35,6 @@ const style = StyleSheet.create({
         backgroundColor: '#A1B5FE',
         minWidth: '40%',
         height: '100%',
-        
       },
     menuContenair:{
         flexDirection: "row",

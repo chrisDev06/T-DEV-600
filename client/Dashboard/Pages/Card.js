@@ -33,9 +33,13 @@ const Card = ({ titleCard }) => {
 };
 
 const styles = StyleSheet.create({
+  CardPage: {
+    maxWidth: 200,
+    minHeight: 30,
+  },
   CardBody: {
     backgroundColor: '#ffffff',
-    width: "90%",
+    maxWidth: "90%",
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
@@ -47,6 +51,7 @@ const styles = StyleSheet.create({
 const componentStyle = StyleSheet.create({
   text: {
     color: 'black',
+    maxWidth: 120
   },
   button: {
     color: 'black',

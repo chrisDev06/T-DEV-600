@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Pressable } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Pressable, ScrollView } from 'react-native';
 import Card from "./Card";
 
 
@@ -39,15 +39,15 @@ const List = () => {
         <View style= {styles.ListHeader}>
             <Text style = {componentStyle.text}>{titleList}</Text>
             <Pressable onPress={deleteList}>
-                <Text style = {componentStyle.text}>del</Text>
+                <Text style = {componentStyle.text}> del </Text>
             </Pressable> 
             <Pressable onPress={updateList}>
-                <Text style = {componentStyle.text}>up</Text>
+                <Text style = {componentStyle.text}> up </Text>
             </Pressable>           
         </View>
-        <View style = {styles.ListCard}>
+        <ScrollView style = {styles.ListCard}>
            {selectCard(listCard)}
-        </View>
+        </ScrollView>
         <View style= {styles.ListFooter}>
             <Pressable onPress={createCard}>
             <Text style = {componentStyle.text}>+ Add a card</Text> 
@@ -60,12 +60,14 @@ const List = () => {
 const styles = StyleSheet.create({
     ListPage : {
         backgroundColor: "#414141",
-        maxWidth: "40%",
-        maxHeight: 300,
+        width: "70%",
+        maxWidth: "70%",
+        minHeight: 300,
         borderRadius: 20,
         margin: 20,
     },
     ListHeader: {
+        height: "15%",
         backgroundColor: "#363636",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     ListCard: {
-        height: "65%",
+        height: "75%",
     },
     ListFooter: {
         height: "10%",
