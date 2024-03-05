@@ -33,7 +33,7 @@ const DashNav = ({createProject,listProject, deleteProject, isdeleteProject, del
 const style = StyleSheet.create({
     container: {
         backgroundColor: '#A1B5FE',
-        minWidth: '40%',
+        width: '30%',
         height: '100%',
       },
     menuContenair:{
@@ -53,9 +53,6 @@ const style = StyleSheet.create({
       marginTop: 20,
       paddingLeft: 10,
     },
-    boutonTrashStyle:{
-
-    }
 })
 
 export default DashNav;
