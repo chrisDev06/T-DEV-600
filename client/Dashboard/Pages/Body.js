@@ -23,7 +23,7 @@ const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen,
   }
   
   return (
-    <View style= {style.BodyPage}>
+    <ScrollView style= {style.BodyPage}>
       <View style={style.container}>
         {isNavOpen && <DashNav createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen}/>}
           <ScrollView style={style.listContainer}>
@@ -33,7 +33,7 @@ const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen,
             <Text style= {style.createListButton}>+</Text>
           </Pressable>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -45,8 +45,6 @@ const style = StyleSheet.create({
   container: {
     height: "100%",
     flexDirection: 'row',
-    justifyContent: "start",
-    alignItems: "start",
     height: "100%"
   },
   listContainer: {
@@ -64,8 +62,9 @@ const style = StyleSheet.create({
     borderRadius: 20
   },
   selectList: {
-    flexDirection: 'row',
-    flexWrap: "wrap"
+    display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gridTemplateRows: "repeat(4, 1fr)",
   }
 });
 
