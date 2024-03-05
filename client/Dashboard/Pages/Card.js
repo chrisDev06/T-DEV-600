@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
+import ButtonCard from "../Component/ButtonCard";
 
 const Card = ({ titleCard }) => {
   const [title, setTitle] = useState(() => {
@@ -26,6 +27,7 @@ const Card = ({ titleCard }) => {
       <View style={styles.CardBody}>
         <Pressable onPress={handlePress}>
           <Text style={componentStyle.text}>{title}</Text>
+          { pressed ? <ButtonCard/> : ""}
         </Pressable>
       </View>
     </View>
