@@ -26,13 +26,13 @@ const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen,
     <View style= {style.BodyPage}>
       <View style={style.container}>
         {isNavOpen && <DashNav createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen}/>}
-          <View style={style.listContainer}>
-           {selectList(listList)}
-          </View>
+          <ScrollView style={style.listContainer}>
+            {selectList(listList)}
+          </ScrollView>
+          <Pressable onPress={createList}>
+            <Text style= {style.createListButton}>+</Text>
+          </Pressable>
       </View>
-      <Pressable onPress={createList}>
-        <Text style= {style.createListButton}>+</Text>
-      </Pressable>
     </View>
   );
 };
@@ -49,11 +49,11 @@ const style = StyleSheet.create({
   listContainer: {
     display: "flex",
     flexDirection: 'row',
-    width: '100%',
     marginBottom: 10,
-    flexWrap: 'wrap',
   },
   createListButton: {
+    marginRight: 20,
+    marginTop: 10,
     padding: 10,
     backgroundColor: "#7B8BC7",
     fontSize: 20,

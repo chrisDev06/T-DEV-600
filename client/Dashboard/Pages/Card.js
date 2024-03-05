@@ -33,10 +33,6 @@ const Card = ({ titleCard }) => {
 };
 
 const styles = StyleSheet.create({
-  CardPage: {
-    maxWidth: 200,
-    minHeight: 30,
-  },
   CardBody: {
     backgroundColor: '#ffffff',
     maxWidth: "90%",
