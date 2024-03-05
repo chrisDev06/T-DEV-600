@@ -35,7 +35,6 @@ const style = StyleSheet.create({
         backgroundColor: '#A1B5FE',
         width: '30%',
         height: '100%',
-        
       },
     menuContenair:{
         flexDirection: "row",
@@ -46,6 +45,9 @@ const style = StyleSheet.create({
       paddingTop: 8,
       paddingLeft: 20,
       color:"#FFFFFF",
+    },
+    projectContainer:{
+      height: "100%"
     },
     projectStyle:{
       marginTop: 20,

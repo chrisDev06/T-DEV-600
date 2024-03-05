@@ -9,7 +9,7 @@ export default function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [listProject, setListProject] = useState([]);
   const [isDeleteOpen, setDeleteOpen] = useState(false);
-
+  const [listList, setListList]= useState([])
   const OpenNav = () => {
     setIsNavOpen(!isNavOpen);
   }
@@ -21,6 +21,9 @@ export default function App() {
   }
   const deleteOpen = () => {
     setDeleteOpen(!isDeleteOpen);
+  }
+  const deleteCard = (index) => {
+    setListCard(listList.filter((project, i) => i !== index));
   }
   console.log(isDeleteOpen)
   return (
@@ -35,6 +38,7 @@ export default function App() {
 
 const headerStyle = StyleSheet.create({
   container: {
+    height: "100%",
     flex: 1,
     backgroundColor: '#D9D6D8',
     alignItems: 'center',

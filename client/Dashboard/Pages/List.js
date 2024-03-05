@@ -1,46 +1,73 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import React, {useState} from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Pressable, ScrollView } from 'react-native';
 import Card from "./Card";
 
 
 let titleList = "List"
+
 const List = () => {
+
+    const [listCard, setListCard]= useState([])
+    const [listList, setListList]= useState([])
+
+    const createCard = () => {
+        setListCard([...listCard, {}]);
+      }
+
+    const deleteList = (index) => {
+        setListList(listList.filter((list, i) => i !== index));
+      }
+    const updateList = (index) => {
+        for(i in listList){
+            if(i == index){
+                setListList(listList);
+            }
+        }
+    }
+
+    const selectCard = ()=>{
+        return(
+            <View>
+            { listCard.map((card, index)=>(
+                <Card titleCard={"fkdsvhfjfekndgnfhg,fdgbsvbdnfh,g;jcgnbxfljh"} key={index}/>
+            ))}
+            </View>
+        )
+    }
   return (
     <View style= {styles.ListPage}>
         <View style= {styles.ListHeader}>
             <Text style = {componentStyle.text}>{titleList}</Text>
-            <TouchableOpacity>
-                <Text style = {componentStyle.text}>...</Text>
-            </TouchableOpacity>           
+            <Pressable onPress={deleteList}>
+                <Text style = {componentStyle.text}> del </Text>
+            </Pressable> 
+            <Pressable onPress={updateList}>
+                <Text style = {componentStyle.text}> up </Text>
+            </Pressable>           
         </View>
-        <View style = {styles.ListCard}>
-            <Card titleCard={"azerzteghryjtukyilukyutjyhrtgdrsfqdzEQFSRGD"}/>
-            <Card titleCard={"azerzteghryjtukyilukyutjyhrtgdrsfqdzEQFSRGD"}/>
-        </View>
+        <ScrollView style = {styles.ListCard}>
+           {selectCard(listCard)}
+        </ScrollView>
         <View style= {styles.ListFooter}>
-            <TouchableOpacity 
-                onPress={ 
-                    ()=>{
-                        return <Card/>
-                    }
-                }
-            >
-            <Text  style = {componentStyle.text} >+ Add a card</Text> 
-            </TouchableOpacity>
+            <Pressable onPress={createCard}>
+            <Text style = {componentStyle.text}>+ Add a card</Text> 
+            </Pressable>
         </View>
     </View>
-  );
+  )
 };
 
 const styles = StyleSheet.create({
     ListPage : {
         backgroundColor: "#414141",
-        maxWidth: "40%",
-        maxHeight: 300,
+        width: "70%",
+        maxWidth: "70%",
+        minHeight: 300,
         borderRadius: 20,
         margin: 20,
     },
     ListHeader: {
+        height: "15%",
         backgroundColor: "#363636",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -50,7 +77,8 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 20,
     },
     ListCard: {
-        height: "60%",
+
+        height: "75%",
     },
     ListFooter: {
         height: "10%",

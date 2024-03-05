@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 
 const Card = ({ titleCard }) => {
   const [title, setTitle] = useState(() => {
@@ -24,9 +24,9 @@ const Card = ({ titleCard }) => {
   return (
     <View style={styles.CardPage}>
       <View style={styles.CardBody}>
-        <TouchableOpacity onPress={handlePress}>
+        <Pressable onPress={handlePress}>
           <Text style={componentStyle.text}>{title}</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </View>
   );
@@ -35,7 +35,7 @@ const Card = ({ titleCard }) => {
 const styles = StyleSheet.create({
   CardBody: {
     backgroundColor: '#ffffff',
-    width: "90%",
+    maxWidth: "90%",
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 10,
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
 const componentStyle = StyleSheet.create({
   text: {
     color: 'black',
+    maxWidth: 120
   },
   button: {
     color: 'black',
