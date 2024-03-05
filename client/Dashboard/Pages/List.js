@@ -39,10 +39,10 @@ const List = () => {
         <View style= {styles.ListHeader}>
             <Text style = {componentStyle.text}>{titleList}</Text>
             <Pressable onPress={deleteList}>
-                <Text style = {componentStyle.text}> del </Text>
+                <FontAwesome name={"trash"} size={18} color={"white"} />
             </Pressable> 
             <Pressable onPress={updateList}>
-                <Text style = {componentStyle.text}> up </Text>
+                <FontAwesome name={"pencil"} size={18} color={"white"} />
             </Pressable>           
         </View>
         <ScrollView style = {styles.ListCard}>
