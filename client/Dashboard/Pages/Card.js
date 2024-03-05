@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 
 const Card = ({ titleCard }) => {
   const [title, setTitle] = useState(() => {
@@ -24,9 +24,9 @@ const Card = ({ titleCard }) => {
   return (
     <View style={styles.CardPage}>
       <View style={styles.CardBody}>
-        <TouchableOpacity onPress={handlePress}>
+        <Pressable onPress={handlePress}>
           <Text style={componentStyle.text}>{title}</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </View>
   );

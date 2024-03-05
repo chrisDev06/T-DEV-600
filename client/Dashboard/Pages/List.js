@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Pressable } from 'react-native';
 import Card from "./Card";
 
 
@@ -8,16 +8,24 @@ let titleList = "List"
 const List = () => {
 
     const [listCard, setListCard]= useState([])
+    const [listList, setListList]= useState([])
 
     const createCard = () => {
         setListCard([...listCard, {}]);
       }
 
-    const deleteCard = (index) => {
-        setListCard(listList.filter((project, i) => i !== index));
+    const deleteList = (index) => {
+        setListList(listList.filter((list, i) => i !== index));
       }
+    const updateList = (index) => {
+        for(i in listList){
+            if(i == index){
+                setListList(listList);
+            }
+        }
+    }
 
-    const displayCard = ()=>{
+    const selectCard = ()=>{
         return(
             <View>
             { listCard.map((card, index)=>(
@@ -30,20 +38,20 @@ const List = () => {
     <View style= {styles.ListPage}>
         <View style= {styles.ListHeader}>
             <Text style = {componentStyle.text}>{titleList}</Text>
-            <TouchableOpacity onPress={deleteCard}>
-                <Text style = {componentStyle.text}>update</Text>
-            </TouchableOpacity> 
-            <TouchableOpacity >
-                <Text style = {componentStyle.text}>delete</Text>
-            </TouchableOpacity>           
+            <Pressable onPress={deleteList}>
+                <Text style = {componentStyle.text}>del</Text>
+            </Pressable> 
+            <Pressable onPress={updateList}>
+                <Text style = {componentStyle.text}>up</Text>
+            </Pressable>           
         </View>
         <View style = {styles.ListCard}>
-           {displayCard(listCard)}
+           {selectCard(listCard)}
         </View>
         <View style= {styles.ListFooter}>
-            <TouchableOpacity onPress={createCard}>
+            <Pressable onPress={createCard}>
             <Text style = {componentStyle.text}>+ Add a card</Text> 
-            </TouchableOpacity>
+            </Pressable>
         </View>
     </View>
   )
