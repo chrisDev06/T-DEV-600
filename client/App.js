@@ -38,6 +38,7 @@ export default function App() {
 
 const headerStyle = StyleSheet.create({
   container: {
+    height: "100%",
     flex: 1,
     backgroundColor: '#D9D6D8',
     alignItems: 'center',

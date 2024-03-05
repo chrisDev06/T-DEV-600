@@ -14,7 +14,7 @@ const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen,
     }
   const selectList = ()=>{
     return(
-        <View>
+        <View style= {style.selectList}>
         { listList.map((card, index)=>(
             <List titleList={"Liste"+ index} key={index}/>
         ))}
@@ -40,16 +40,20 @@ const Body = ({isNavOpen, createProject, listProject, deleteProject, deleteOpen,
 const style = StyleSheet.create({
   BodyPage: {
     width: "100%",
+    height: "100%",
   },
   container: {
+    height: "100%",
     flexDirection: 'row',
     justifyContent: "start",
     alignItems: "start",
+    height: "100%"
   },
   listContainer: {
     display: "flex",
     flexDirection: 'row',
     marginBottom: 10,
+    flexWrap: "wrap"
   },
   createListButton: {
     marginRight: 20,
@@ -58,6 +62,10 @@ const style = StyleSheet.create({
     backgroundColor: "#7B8BC7",
     fontSize: 20,
     borderRadius: 20
+  },
+  selectList: {
+    flexDirection: 'row',
+    flexWrap: "wrap"
   }
 });
 

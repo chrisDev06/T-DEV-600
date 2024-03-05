@@ -46,6 +46,9 @@ const style = StyleSheet.create({
       paddingLeft: 20,
       color:"#FFFFFF",
     },
+    projectContainer:{
+      height: "100%"
+    },
     projectStyle:{
       marginTop: 20,
       paddingLeft: 10,
