@@ -31,11 +31,8 @@ const DashNav = ({ createProject, listProject, deleteProject, isdeleteProject, d
         <View style={styles.modalContent}>
           <Text style={styles.title}>Your Board</Text>
           <TouchableOpacity onPress={openNav} style={styles.closeButton}>
-            <FontAwesome name="times" size={24} color="#000" />
+            <FontAwesome name="times" style={styles.closeModal} />
           </TouchableOpacity>
-          <View style={styles.menuContainer}>
-            <MenuCreate />
-          </View>
           <Menu
             createProject={createProject}
             deleteProject={deleteProject}
@@ -55,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   modalContent: {
-    backgroundColor: '#A1B5FE',
+    backgroundColor: 'white',
     height: '30%',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
@@ -63,14 +60,15 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   title: {
-    backgroundColor: "#7B8BC7",
+    backgroundColor: "#F5F7FB",
     height: 35,
     paddingTop: 8,
     paddingLeft: 20,
-    color: "#FFFFFF",
+    color: "black",
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     marginBottom: 10,
+    fontWeight: "bold"
   },
   menuContainer: {
     flexDirection: "row",
@@ -94,6 +92,11 @@ const styles = StyleSheet.create({
     top: 10,
     right: 10,
   },
+  closeModal: {
+    fontSize: 25,
+    color: "#AD002C",
+    padding: 3
+  }
 });
 
 export default DashNav;
