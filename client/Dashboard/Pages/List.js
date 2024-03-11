@@ -1,3 +1,4 @@
+import { FontAwesome } from '@expo/vector-icons';
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Pressable, ScrollView } from 'react-native';
 import Card from "./Card";
