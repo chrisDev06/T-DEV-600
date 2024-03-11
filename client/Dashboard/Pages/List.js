@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 
 const componentStyle = StyleSheet.create({
     text : {
-        color: "#7B8BC7",
+        color: "#A1B5FE",
         
     }
 })
