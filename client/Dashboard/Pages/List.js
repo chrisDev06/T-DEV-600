@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 
         height: "75%",
     },
-    ListFooter: {
+    ListFooter: {        
         height: "10%",
         backgroundColor: "#363636",
         borderBottomLeftRadius: 20,
@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
 
 const componentStyle = StyleSheet.create({
     text : {
-        color: "#A1B5FE"
+        color: "#7B8BC7",
+        
     }
 })
 
