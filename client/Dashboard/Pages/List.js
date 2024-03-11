@@ -61,6 +61,7 @@ const List = () => {
 const styles = StyleSheet.create({
     ListPage : {
         backgroundColor: "#414141",
+        minWidth: 150,
         width: "70%",
         maxWidth: "70%",
         minHeight: 300,
