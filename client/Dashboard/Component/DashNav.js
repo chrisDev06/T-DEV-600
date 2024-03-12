@@ -45,6 +45,7 @@ const DashNav = ({ createProject, listProject, deleteProject, isdeleteProject, d
   );
 };
 
+<<<<<<< HEAD
 const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
@@ -98,5 +99,31 @@ const styles = StyleSheet.create({
     padding: 3
   }
 });
+=======
+const style = StyleSheet.create({
+    container: {
+        backgroundColor: '#A1B5FE',
+        width: '30%',
+        height: '100%',
+      },
+    menuContenair:{
+        flexDirection: "row",
+    },
+    textStyle: {
+      backgroundColor: "#7B8BC7",
+      height: 35,
+      paddingTop: 8,
+      paddingLeft: 20,
+      color:"#FFFFFF",
+    },
+    projectContainer:{
+      height: "100%"
+    },
+    projectStyle:{
+      marginTop: 20,
+      paddingLeft: 10,
+    },
+})
+>>>>>>> main
 
 export default DashNav;

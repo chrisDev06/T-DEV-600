@@ -10,7 +10,7 @@ export default function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [listProject, setListProject] = useState([]);
   const [isDeleteOpen, setDeleteOpen] = useState(false);
-
+  const [listList, setListList]= useState([])
   const OpenNav = () => {
     setIsNavOpen(!isNavOpen);
   }
@@ -23,10 +23,17 @@ export default function App() {
   const deleteOpen = () => {
     setDeleteOpen(!isDeleteOpen);
   }
+<<<<<<< HEAD
 
   useEffect(() => {
   }, [isNavOpen])
 
+=======
+  const deleteCard = (index) => {
+    setListCard(listList.filter((project, i) => i !== index));
+  }
+  console.log(isDeleteOpen)
+>>>>>>> main
   return (
     <View style={headerStyle.container}>
       <NavBar openNav={OpenNav} />
@@ -39,6 +46,7 @@ export default function App() {
 
 const headerStyle = StyleSheet.create({
   container: {
+    height: "100%",
     flex: 1,
     alignItems: 'center',
     justifyContent: 'collapse',
