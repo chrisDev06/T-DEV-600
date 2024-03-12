@@ -23,17 +23,14 @@ export default function App() {
   const deleteOpen = () => {
     setDeleteOpen(!isDeleteOpen);
   }
-<<<<<<< HEAD
 
   useEffect(() => {
   }, [isNavOpen])
 
-=======
   const deleteCard = (index) => {
     setListCard(listList.filter((project, i) => i !== index));
   }
   console.log(isDeleteOpen)
->>>>>>> main
   return (
     <View style={headerStyle.container}>
       <NavBar openNav={OpenNav} />
