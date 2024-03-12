@@ -9,7 +9,7 @@ export default function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [listProject, setListProject] = useState([]);
   const [isDeleteOpen, setDeleteOpen] = useState(false);
-  const [listList, setListList]= useState([])
+  const [listList, setListList] = useState([])
   const OpenNav = () => {
     setIsNavOpen(!isNavOpen);
   }
@@ -28,13 +28,13 @@ export default function App() {
   console.log(isDeleteOpen)
   return (
     <View style={headerStyle.container}>
-      <Header OpenNav ={OpenNav}/>
+      <Header OpenNav={OpenNav} />
       <Body isNavOpen={isNavOpen} createProject={createProject} listProject={listProject} deleteProject={deleteProject} deleteOpen={deleteOpen} isDeleteOpen={isDeleteOpen} />
       {/* <Footer/> */}
     </View>
   );
 }
-
+// test
 
 const headerStyle = StyleSheet.create({
   container: {
@@ -44,5 +44,5 @@ const headerStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'collapse',
   },
- 
+
 });
