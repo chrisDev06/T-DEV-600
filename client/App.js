@@ -43,6 +43,5 @@ const headerStyle = StyleSheet.create({
     backgroundColor: '#D9D6D8',
     alignItems: 'center',
     justifyContent: 'collapse',
-  },
- 
+  }, 
 });
