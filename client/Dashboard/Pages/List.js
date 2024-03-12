@@ -1,3 +1,4 @@
+import { FontAwesome } from '@expo/vector-icons';
 import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Pressable, ScrollView } from 'react-native';
 import Card from "./Card";
@@ -60,6 +61,7 @@ const List = () => {
 const styles = StyleSheet.create({
     ListPage : {
         backgroundColor: "#414141",
+        minWidth: 150,
         width: "70%",
         maxWidth: "70%",
         minHeight: 300,
@@ -80,7 +82,7 @@ const styles = StyleSheet.create({
 
         height: "75%",
     },
-    ListFooter: {
+    ListFooter: {        
         height: "10%",
         backgroundColor: "#363636",
         borderBottomLeftRadius: 20,
@@ -92,7 +94,7 @@ const styles = StyleSheet.create({
 
 const componentStyle = StyleSheet.create({
     text : {
-        color: "#A1B5FE"
+        color: "#A1B5FE",
     }
 })
 

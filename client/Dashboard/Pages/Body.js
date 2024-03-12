@@ -57,9 +57,11 @@ const style = StyleSheet.create({
     marginRight: 20,
     marginTop: 10,
     padding: 10,
-    backgroundColor: "#7B8BC7",
+    paddingLeft: 15,
+    paddingRight: 15,
+    backgroundColor: "#A1B5FE",
     fontSize: 20,
-    borderRadius: 20
+    borderRadius: 15
   },
   selectList: {
     display: "grid",

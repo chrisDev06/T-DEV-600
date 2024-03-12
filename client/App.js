@@ -44,5 +44,4 @@ const headerStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'collapse',
   },
-
 });
